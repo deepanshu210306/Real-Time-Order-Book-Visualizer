@@ -32,21 +32,8 @@ This project demonstrates handling high-frequency data, efficient React state ma
   - 🟥 Red → Market sell  
 
 ---
+#  Install dependencies
+npm install
 
-## 📁 Project Structure
-src/
-│
-├── app/
-│   ├── page.tsx                # Main UI layout
-│
-├── components/
-│   ├── OrderBook.tsx           # Main order book visualization
-│   ├── OrderBookRow.tsx        # Row component with depth bar
-│   ├── RecentTrades.tsx        # Recent trades list
-│   ├── TradeRow.tsx            # Individual trade row
-│
-├── hooks/
-│   ├── useBinanceSocket.ts     # Handles live Binance WebSocket
-│
-└── types/
-    ├── index.ts                # Trade interface definition
+#  Run development server
+npm run dev
