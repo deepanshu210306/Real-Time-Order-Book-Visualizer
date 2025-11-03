@@ -37,3 +37,5 @@ npm install
 
 #  Run development server
 npm run dev
+
+# Access the PRoject here
