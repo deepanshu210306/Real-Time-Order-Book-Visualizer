@@ -33,9 +33,10 @@ This project demonstrates handling high-frequency data, efficient React state ma
 
 ---
 #  Install dependencies
-npm install
+- npm install
 
 #  Run development server
-npm run dev
+- npm run dev
 
 # Access the PRoject here
+- https://real-time-order-book-visualizer-flame.vercel.app/
