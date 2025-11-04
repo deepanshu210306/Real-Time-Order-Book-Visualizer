@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 Real-Time Order Book Visualizer
 
-## Getting Started
+A high-performance, real-time **stock order book visualizer** built with **Next.js + TypeScript**, streaming **live Binance market data**.
 
-First, run the development server:
+This project demonstrates handling high-frequency data, efficient React state management, and smooth UI updates — simulating a real-world financial trading interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔹 Live Binance WebSocket Feed
+- Connects directly to the **Binance WebSocket API**.
+- Subscribes to:
+  - **Aggregate Trades (`aggTrade`)** — for recent trades.
+  - **Order Book Deltas (`depth@100ms`)** — for live bid/ask updates.
+- Automatically removes zero-quantity levels.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔹 Order Book Component
+- Displays real-time **bids** (buyers) and **asks** (sellers).
+- **Sorted**:
+  - Bids → Descending order (highest at top)
+  - Asks → Ascending order (lowest at top)
+- **Columns**:
+  - Price | Amount | Total (cumulative)
+- **Spread** dynamically shown between bids and asks.
+- **Depth visualization** via gradient bars (green/red).
 
-## Learn More
+### 🔹 Recent Trades Component
+- Displays the **50 most recent trades**.
+- Each new trade **flashes**:
+  - 🟩 Green → Market buy  
+  - 🟥 Red → Market sell  
 
-To learn more about Next.js, take a look at the following resources:
+---
+#  Install dependencies
+- npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#  Run development server
+- npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Access the PRoject here
+- https://real-time-order-book-visualizer-flame.vercel.app/
